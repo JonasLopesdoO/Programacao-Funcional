@@ -1,0 +1,37 @@
+"ghci p = ["casa", "cachorro", "maca"]
+
+
+"ghci e = ["house", "dog" , "apple"]
+
+"ghci [(p!!k)++(e!!k) | k <- [0..2]]
+
+["casahouse","cachorrodog","macaapple"]
+
+"ghci [(p!!k)++" "++(e!!k) | k <- [0..2]]
+
+["casa house","cachorro dog","maca apple"]
+
+"ghci [x*2 | x <- [1..10]] 
+
+tamanho da lista 
+
+"ghci length' l = sum [1 |_ <- l]
+
+"ghci length' [1,2,3]
+3
+
+remove maiuscula 
+"ghci removeMaiuscula string = [c | c <- string, c `elem` ['a'..'z']]
+"ghci removeMaiuscula ['A', 'a']
+"a"
+
+ removeMaiuscula string = [c | c <- string , not (c `elem` ['A'..'Z'])]
+
+ triangulo = [ (a,b,c)| c <- [1..100], b <- [1..c], a <- [1..b], a^2 + b^2 == c^2, a+b+c <= 1000]
+
+
+data Pessoa = Pessoa String String Int deriving (Show, Eq)
+Pessoa "Maria" "Antonia" 45 == Pessoa "Maria" "Antonia" 45
+
+
+
